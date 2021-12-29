@@ -1,6 +1,6 @@
 import secp256k1 as ice
 import random,sys,requests,time,psycopg2
-sys.exit()
+
 connection = psycopg2.connect(user="kjldtoeazbhfah",
                               password="aa6d6881fe17734a9bec1a247f3e0709643ada9ed6890d3c7821c7d9129037a6",
                               host= "ec2-52-54-167-8.compute-1.amazonaws.com",
