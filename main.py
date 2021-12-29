@@ -1,5 +1,6 @@
 import secp256k1 as ice
 import random,sys,requests,time,psycopg2
+sys.exit()
 connection = psycopg2.connect(user="kjldtoeazbhfah",
                               password="aa6d6881fe17734a9bec1a247f3e0709643ada9ed6890d3c7821c7d9129037a6",
                               host= "ec2-52-54-167-8.compute-1.amazonaws.com",
@@ -22,7 +23,7 @@ connection.commit()
 min_key = 0x8000000000000000
 max_key = 0xffffffffffffffff 
 search = "3ee4133d991f52fdf6a25c9834e0745ac74248a4"
-pregen = 1000000
+pregen = 1000
 ##sett
 cursor.execute("SELECT * from plog Where ID = 1")
 sett = cursor.fetchall()
@@ -57,7 +58,7 @@ for n in range(main_n,1000000000):
                         pass
                 sys.exit()
             key +=1
-    if n % 100==0:
+    if n % 1000==0:
         print("n:",n,"main_past:",main_past)
         update_query = "Update plog set n = '"+str(n)+"' where id = 1"
         cursor.execute(update_query)
