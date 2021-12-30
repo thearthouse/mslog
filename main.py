@@ -58,7 +58,7 @@ for n in range(main_n,1000000000):
                         pass
                 sys.exit()
             key +=1
-    if n % 10000==0:
+    if n % 1000000==0:
         print("n:",n,"main_past:",main_past)
         update_query = "Update plog set n = '"+str(n)+"' where id = 1"
         cursor.execute(update_query)
